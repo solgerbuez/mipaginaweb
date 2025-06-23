@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #03254c;
+  color: white;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-solo {
+  width: 150px;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario {
+  background-color: #063970;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 1.2rem 0 0.5rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #012d5d;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.opciones-problemas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.opciones-problemas button {
+  background-color: #063970;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.opciones-problemas button img {
+  width: 32px;
+  height: 32px;
+}
+
+.opciones-problemas button span {
+  flex: 1;
+  text-align: left;
+}
+
+.opciones-problemas button.activo {
+  background-color: #4db8ff;
+  color: #03254c;
+  font-weight: bold;
+}
+
+.btn-cotizar {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #011f3f;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-cotizar:hover {
+  background-color: #4db8ff;
+  color: #03254c;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
