@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GL Servicio Técnico</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo GL" class="logo" />
+    <h1>GL SERVICIO TÉCNICO</h1>
+    <p class="subtitulo">Reparación de celulares y teléfonos</p>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <label for="marca">Seleccioná tu equipo</label>
+      <select id="marca">
+        <option value="iPhone">iPhone</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Motorola">Motorola</option>
+        <option value="Xiaomi">Xiaomi</option>
+      </select>
+
+      <label>¿Qué se rompió?</label>
+      <div class="opciones-problemas">
+        <button onclick="seleccionarProblema('Batería', event)">
+          <img src="img/bateria.png" alt="Batería" /><span>Batería</span>
+        </button>
+        <button onclick="seleccionarProblema('Pantalla', event)">
+          <img src="img/pantalla.png" alt="Pantalla" /><span>Cambio de pantalla</span>
+        </button>
+        <button onclick="seleccionarProblema('Cámara', event)">
+          <img src="img/camara.png" alt="Cámara" /><span>Cámara</span>
+        </button>
+        <button onclick="seleccionarProblema('Pin de carga', event)">
+          <img src="img/carga.png" alt="Pin de carga" /><span>Pin de carga</span>
+        </button>
+      </div>
+
+      <button class="btn-cotizar" onclick="enviarWhatsApp()">Cotizar</button>
+    </section>
+
+    <section class="telefono-imagen">
+      <img src="img/celular-azul.png" alt="Celular" />
+    </section>
+  </main>
+
+  <footer>
+    <p>GL Servicio Técnico · Santa Rosa · 2025</p>
+  </footer>
+
+  <script>
+    let problemaSeleccionado = "";
+
+    function seleccionarProblema(problema, event) {
+      problemaSeleccionado = problema;
+      const botones = document.querySelectorAll(".opciones-problemas button");
+      botones.forEach(btn => btn.classList.remove("activo"));
+      event.currentTarget.classList.add("activo");
+    }
+
+    function enviarWhatsApp() {
+      const marca = document.getElementById("marca").value;
+
+      if (!problemaSeleccionado) {
+        alert("Por favor, seleccioná qué se rompió.");
+        return;
+      }
+
+      const mensaje = `Hola. Quiero cotizar la reparación de mi ${marca}. El problema es: ${problemaSeleccionado}.`;
+      const url = `https://wa.me/5492954239574?text=${encodeURIComponent(mensaje)}`;
+      location.href = url;
+    }
+  </script>
+</body>
+</html>
