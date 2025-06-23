@@ -1,0 +1,1 @@
+Se trata de una pagina web que ayuda a facilitar el trabajo tanto del dueño de la web que es el que arregla celulares como al,cliente a poder sacar un turno virtualmente, seleccionando de manera facil y visual su problema
